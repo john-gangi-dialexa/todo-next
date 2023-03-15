@@ -4,7 +4,17 @@
 
 a to-do list app is a great way to explore single-page application (SPA) best practices. by building a to-do list app with Next and React, you can learn how to manage application state, handle user interactions, and create dynamic interfaces. hopefully an emphasis on best practice will offer guidance on not only the features which make SPA applications but how to build them to be safe, secure, and behaving as expected.
 
+# Table of Contents
+
+- [setting up the environment](#environment)
+- [our first next app](#our-first-next-app)
+- [enforcing code style](#section-3)
+- [unit testing](#section-4)
+- [git + husky + github workflows](#section-5)
+
+
 1.**setting up the environment**
+<a name="environment"></a>
 
   software prequisites:
    - [vs code](<[vs](https://code.visualstudio.com)>), 
