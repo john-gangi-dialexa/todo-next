@@ -31,7 +31,7 @@ you can see the placeholder application if you run: `npm run dev`
 
 for now let's pair it down to this:
 
-```
+```tsx
 import Image from 'next/image';
 import styles from './page.module.css';
 
