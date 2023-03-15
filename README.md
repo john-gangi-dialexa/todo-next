@@ -79,4 +79,7 @@ export default function Home() {
 }
 ```
 
+
+![app_v1](./app_v1.png)
+
 **important note:**you might notice that i have replaced the next placeholder images with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, that's because static files (like logos and midi theme songs) can easily be served this way by adding them to the /public directory of our next application!
