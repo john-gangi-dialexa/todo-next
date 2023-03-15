@@ -6,7 +6,10 @@ A to-do list app is a great way to explore single-page application (SPA) best pr
 
 1.**setting up the environment**
 
-- This project assumes that [vs code](<[vs](https://code.visualstudio.com)>), [git](https://git-scm.com), and [node/npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are already installed and that we'll be developing on mac hardware–though this is largely irrelevant.
+  software prequisites:
+   - [vs code](<[vs](https://code.visualstudio.com)>), 
+   - [git](https://git-scm.com), 
+   - [node/npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are already installed and that we'll be developing on mac hardware–though this is largely irrelevant.
 
 verifiy node, git, npm:
 
