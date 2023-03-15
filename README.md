@@ -2,7 +2,7 @@
 
 ## todo-next: our best practices 101 project
 
-A to-do list app is a great way to explore single-page application (SPA) best practices. By building a to-do list app with Next and React, you can learn how to manage application state, handle user interactions, and create dynamic interfaces. Hopefully an emphasis on best practice will offer guidance on not only the features which make SPA applications but how to build them to be safe, secure, and behaving as expected.
+a to-do list app is a great way to explore single-page application (SPA) best practices. by building a to-do list app with Next and React, you can learn how to manage application state, handle user interactions, and create dynamic interfaces. hopefully an emphasis on best practice will offer guidance on not only the features which make SPA applications but how to build them to be safe, secure, and behaving as expected.
 
 1.**setting up the environment**
 
@@ -74,3 +74,5 @@ export default function Home() {
   );
 }
 ```
+
+you might notice that i have replaced the next placeholder images with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, that's because static files (like logos and midi theme songs) can easily be served this way by adding them to the /public directory of our next application!
