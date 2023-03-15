@@ -22,6 +22,8 @@ john@$ %: git --version
 git version 2.32.1 (Apple Git-133)
 ```
 
+**important note:** node is an extremely popular js runtime that is used create backend applications of all sizes, with its package manager node hosts one of the richest ecosystems for developers to jump-in and begin coding. (The sever-side magic of next is powered by node "under the hood") 
+
 2.**initialize our first next app**
 
 ```zsh
@@ -31,6 +33,8 @@ npx create-next-app . --ts --eslint --src-dir
 ```
 
 you can see the placeholder application if you run: `npm run dev`
+
+
 
 for now let's pair it down to this:
 
@@ -75,4 +79,4 @@ export default function Home() {
 }
 ```
 
-you might notice that i have replaced the next placeholder images with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, that's because static files (like logos and midi theme songs) can easily be served this way by adding them to the /public directory of our next application!
+**important note:**you might notice that i have replaced the next placeholder images with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, that's because static files (like logos and midi theme songs) can easily be served this way by adding them to the /public directory of our next application!
