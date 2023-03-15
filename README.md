@@ -10,7 +10,7 @@ A to-do list app is a great way to explore single-page application (SPA) best pr
 
 verifiy node, git, npm:
 
-```
+```zsh
 john@$ %: node -v
 v18.7.0
 john@$ %: npm -v
@@ -21,7 +21,7 @@ git version 2.32.1 (Apple Git-133)
 
 2.**initialize our first next app**
 
-```
+```zsh
 mkdir todo-next && cd todo-next
 git init
 npx create-next-app . --ts --eslint --src-dir
