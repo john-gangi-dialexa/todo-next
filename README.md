@@ -57,8 +57,8 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-            <h2>todo-next</h2>
           <code>
+            <h2>todo-next</h2>
             <br />
             <strong>welecome</strong> to the to-do list app.
             <br />
