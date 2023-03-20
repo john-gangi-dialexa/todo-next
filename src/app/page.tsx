@@ -8,7 +8,7 @@ import styles from './page.module.css';
 
 
 export default function Home() {
-  const [goals, setGoals] =; useState([]);
+  const [goals, setGoals] = useState([]);
   const [input, setInput] = useState('');
   const [shaking, setShaking] = useState(false);
 
