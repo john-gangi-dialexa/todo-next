@@ -8,9 +8,9 @@ a to-do list app is a great way to explore single-page application (SPA) best pr
 
 - [setting up the environment](#environment)
 - [our first next app](#our-first-next-app)
-- [enforcing code style](#section-3)
+- [enforcing code style on commit with husky](#static-analysis)
 - [unit testing](#section-4)
-- [git + husky + github workflows](#section-5)
+- [github workflows for deployment](#section-5)
 
 
 1.**setting up the environment**
@@ -35,6 +35,7 @@ git version 2.32.1 (Apple Git-133)
 **important note:** node is an extremely popular js runtime that is used create backend applications of all sizes, with its package manager node hosts one of the richest ecosystems for developers to jump-in and begin coding. (The sever-side magic of next is powered by node "under the hood") 
 
 2.**initialize our first next app**
+<a name="our-first-next-app"></a>
 
 ```zsh
 mkdir todo-next && cd todo-next
@@ -93,3 +94,47 @@ export default function Home() {
 ![app_v1](./app_v1.png)
 
 **important note:** you might notice that i have replaced the next placeholder images with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, that's because static files (like logos and midi theme songs) can easily be served this way by adding them to the /public directory of our next application!
+
+3.**enforcing code style**
+<a name="static-analysis"></a>
+
+we added eslint for basic "static code analysis" when we initiated the project. 
+
+you can check that it is working now by running:
+
+`npx eslint --ext .tsx --ext .ts src/**`
+
+We want to automate all this ASAP so we use a tool called `husky` which enables us to run all our tests on commit (or at other hooks).
+
+the process to install husky looks something like this:
+```
+Install
+npm install husky --save-dev
+Usage
+Edit package.json > prepare script and run it once:
+```
+
+```
+npm pkg set scripts.prepare="husky install"
+npm run prepare
+Add a hook:
+```
+
+```
+npx husky add .husky/pre-commit "npm test"
+git add .husky/pre-commit
+Make a commit:
+```
+
+don't forget to add this line to your package.json
+`    "test": "npx eslint --ext .tsx --ext .ts src/**" `
+
+Add a bug for a quick sanity check (a `;` halfway through a method name or w.e.).
+
+And now when you try to make the following commit, you'll see an error.
+```
+git commit -m "tests(v0): adds first husky hook"
+# `npm test` will run
+```
+
+
