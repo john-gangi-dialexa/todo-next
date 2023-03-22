@@ -37,15 +37,13 @@ git version 2.32.1 (Apple Git-133)
 2.**initialize our first next app**
 <a name="our-first-next-app"></a>
 
-```zsh
+```bash
 mkdir todo-next && cd todo-next
 git init
-npx create-next-app . --ts --eslint --src-dir
+npx create-next-app . --example --ts --eslint --src-dir
 ```
 
 you can see the placeholder application if you run: `npm run dev`
-
-
 
 for now let's pair it down to this:
 
@@ -90,10 +88,7 @@ export default function Home() {
 }
 ```
 
-
-![app_v1](./app_v1.png)
-
-**important note:** you might notice that i have replaced the next placeholder images with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, that's because static files (like logos and midi theme songs) can easily be served this way by adding them to the /public directory of our next application!
+**important note:** in the source code the next placeholder image is replaced with [this laptop guy](https://github.com/john-gangi-dialexa/todo-next/blob/master/public/laptop.svg). that src path is rather laconic you say, static files can easily be served this by adding them to the /public directory of our next application!
 
 3.**enforcing code style**
 <a name="static-analysis"></a>
@@ -138,3 +133,32 @@ git commit -m "tests(v0): adds first husky hook"
 ```
 
 
+4.**Jest**
+
+configure jest... then write our first test
+
+```tsx
+import React from 'react';
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom'
+import  { TodoList }  from '../../src/app/components/TodoList';
+import { debug } from 'console';
+
+describe('TodoTests', () => {
+  it('renders without error', () => {
+      const { asFragment } = render(<TodoList />);
+  });
+
+  // here's our first foray into TDD (test driven development)
+  // this test fails
+  // TODO: reimplement TodoList to take a property goals which is goals[]
+  it('renders a list of goals', () => {
+    const goals = [    { value: 'goal 1', id: 1 },    { value: 'goal 2', id: 2 }  ];
+    const { getByText } = render(<TodoList goals={goals} />);
+    goals.forEach((goal) => {
+      const goalItem = getByText(goal.value);
+      expect(goalItem).toBeInTheDocument();
+    });
+  });
+});
+```
