@@ -17,7 +17,7 @@ describe('TodoTests', () => {
   //  towards functionality I'd like to implement
   //  we can call it TDD (test driven development)
   //
-  //  TODO: reimplement TodoList to take a property goals which is goals[]
+  //  TODO: reimplement TodoList to take a property goals which is goal[]
   //
   // THE TEST:
   // it('renders a list of goals', () => {
@@ -29,5 +29,5 @@ describe('TodoTests', () => {
   //   });
   // });
 
-  
+
 });

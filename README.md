@@ -149,9 +149,15 @@ describe('TodoTests', () => {
       const { asFragment } = render(<TodoList />);
   });
 
-  // here's our first foray into TDD (test driven development)
-  // this test fails
-  // TODO: reimplement TodoList to take a property goals which is goals[]
+  //  Here's a failing test. I wrote this test **before** 
+  //  having a goals property on the TodoList component.
+  //
+  //  Because the failing test points 
+  //  towards functionality I'd like to implement
+  //  we can call it TDD (test driven development)
+  //
+  //  TODO: reimplement TodoList to take a property goals which is goal[]
+  //
   it('renders a list of goals', () => {
     const goals = [    { value: 'goal 1', id: 1 },    { value: 'goal 2', id: 2 }  ];
     const { getByText } = render(<TodoList goals={goals} />);
