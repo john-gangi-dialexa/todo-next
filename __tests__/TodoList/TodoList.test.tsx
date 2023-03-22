@@ -5,6 +5,8 @@ import  { TodoList }  from '../../src/app/components/TodoList';
 import { debug } from 'console';
 
 describe('TodoTests', () => {
+
+  //test that our component renders without error
   it('renders a heading', () => {
       const { asFragment } = render(<TodoList />);
   });
@@ -20,14 +22,12 @@ describe('TodoTests', () => {
   //  TODO: reimplement TodoList to take a property goals which is goal[]
   //
   // THE TEST:
-  // it('renders a list of goals', () => {
-  //   const goals = [    { value: 'goal 1', id: 1 },    { value: 'goal 2', id: 2 }  ];
-  //   const { getByText } = render(<TodoList goals={goals} />);
+  //  it('renders a list of goals', () => {
+  //  const goals = [    { value: 'goal 1', id: 1 },    { value: 'goal 2', id: 2 }  ];
+  //  const { getByText } = render(<TodoList goals={goals} />);
   //   goals.forEach((goal) => {
   //     const goalItem = getByText(goal.value);
   //     expect(goalItem).toBeInTheDocument();
   //   });
-  // });
-
-
+  //  });
 });
