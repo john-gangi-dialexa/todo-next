@@ -3,13 +3,18 @@ import generateID from "../generateID";
 import Image from 'next/image';
 import styles from '../page.module.css';
 
+export interface TodoItem {
+  value: string;
+  id: string;
+}
+
 
 export const TodoList : FC = () => { 
-  const [goals, setGoals] = useState([]);
+  const [goals, setGoals] = useState<TodoItem[]>([]);
   const [input, setInput] = useState('');
   const [shaking, setShaking] = useState(false);
 
-  const handleAddGoal = (event: { type: string; keyCode: number; } ) => {
+  const handleAddGoal = (event : React.MouseEventHandler<HTMLDivElement> | React.KeyboardEvent<HTMLInputElement> | any) => {
     if (input.length < 1) {
       setShaking(true); 
       setTimeout(() => {
