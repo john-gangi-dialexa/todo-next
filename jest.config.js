@@ -9,7 +9,7 @@ module.exports = {
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
     // https://jestjs.io/docs/webpack#mocking-css-modules
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
   },
   transform: {
     // Use babel-jest to transpile tests with the next/babel preset
@@ -21,4 +21,4 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   testEnvironment: 'jest-environment-jsdom',
-}
+};

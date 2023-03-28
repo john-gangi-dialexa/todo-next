@@ -1,21 +1,19 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom'
-import  { TodoList }  from '../../src/app/components/TodoList';
+import '@testing-library/jest-dom';
+import { TodoList } from '../../src/app/components/TodoList';
 import { debug } from 'console';
 
 describe('TodoTests', () => {
-
   //test that our component renders without error
   it('renders a heading', () => {
-      const { asFragment } = render(<TodoList />);
+    const { asFragment } = render(<TodoList />);
   });
 
-
-  //  Here's a failing test. I wrote this test **before** 
+  //  Here's a failing test. I wrote this test **before**
   //  having a goals property on the TodoList component.
   //
-  //  Because the failing test points 
+  //  Because the failing test points
   //  towards functionality I'd like to implement
   //  we can call it TDD (test driven development)
   //
