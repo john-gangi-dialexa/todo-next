@@ -9,7 +9,7 @@
     "lint": "next lint",
     "start": "next start",
     "prepare": "husky install",
-    "test": "jest && npx eslint --ext .tsx --ext .ts src/**"
+    "test": "jest && npx eslint --ext .tsx --ext .ts && next lint"
   },
   "dependencies": {
     "@next/font": "13.2.4",
