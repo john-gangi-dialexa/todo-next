@@ -5,6 +5,11 @@ module.exports = {
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
     '!**/node_modules/**',
+    '!**/e2e/**'
+  ],
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/e2e/"
   ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
