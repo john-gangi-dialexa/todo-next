@@ -53,7 +53,7 @@ export const TodoList : FC = () => {
             we can be begin to create interactive web pages.
           </div>
           </div>
-          <div className={styles.card}>
+          <div data-testid="todo-list-test" className={styles.card}>
           <span>reminders:</span>
           <hr></hr>
           {goals.map((todo, index) => (
