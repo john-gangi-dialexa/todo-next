@@ -60,26 +60,23 @@ export const TodoList: FC = () => {
               HMTL + CSS + TS we can be begin to create interactive web pages.
             </div>
           </div>
-          <div className={styles.card}>
-            <span>reminders:</span>
-            <hr></hr>
-            {goals.map((todo, index) => (
-              <div key={todo.id}>
-                <li>
-                  {todo.value}
-                  <div
-                    className={styles.cancel}
-                    onClick={() => handleRemoveGoal(todo.id)}
-                  >
-                    <Image
-                      alt="remove todo item"
-                      width={12}
-                      height={12}
-                      src="/close.svg"
-                    />
-                  </div>
-                </li>
+          <div data-testid="todo-list-test" className={styles.card}>
+          <span>reminders:</span>
+          <hr></hr>
+          {goals.map((todo, index) => (
+            <div key={todo.id}>
+            <li  >
+              {todo.value} 
+              <div className={styles.cancel} onClick={() => handleRemoveGoal(todo.id)}>
+                <Image
+                alt="remove todo item"
+                width={12}
+                height={12}
+                src="/close.svg"
+                />
               </div>
+            </li>
+            </div>
             ))}
             <input
               id={shaking ? 'shake' : ''}
