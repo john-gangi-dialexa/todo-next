@@ -9,9 +9,9 @@ test('has title', async ({ page }) => {
 
 test('add an item', async ({ page }) => {
   await page.goto('localhost:3000');
-  const card  = page.getByTestId('todo-list-test');
-  const button = page.getByText('Add to list');
-  await page.getByRole('textbox').type("Go to work", {delay: 100});
+  const card  = page.getByTestId('todo-list-card');
+  const button = page.getByTestId('todo-list-add-button');
+  await page.getByRole('textbox').fill("Go to work");
   await button.click();
   await expect(card).toHaveText(/Go to work/);
 

@@ -4,12 +4,11 @@ module.exports = {
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!**/e2e/**'
+    '!**/node_modules/**'
   ],
   testPathIgnorePatterns: [
     "/node_modules/",
-    "/e2e/"
+    "/__e2e__/"
   ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
